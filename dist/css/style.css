@@ -1,0 +1,238 @@
+
+/* google font line @import url("") */
+/* @import url("https://fonts.google.com/specimen/Lato?query=lato"); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Lato",sans-serif;
+  background-image: url("https://www.geeklawblog.com/2018/12/add-background-image-linkedin-profile.html");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items:  center;
+  background-color: lightblue;
+  min-height: 100vh;
+
+}
+.container{
+  width:  950px;
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+  min-height: 350px;
+  padding: 80px 90px; 
+  border-radius: 10px;
+  display: flex;
+}
+.leftSide ,.rightSide {
+  width:50%;
+
+}
+.leftSide input{
+  margin-top: 30%;
+  display: flex;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 30px;
+}
+ .leftSide input:focus {
+    outline: none;
+
+}
+.rightSide h1{
+ color: #1da3dd;
+ font-size: 32px;
+}
+.rightSide h2{
+  color: #444;
+  margin: 20px auto 10px;
+  font-size: 25px;
+}
+
+.rightSide ul{
+  color: #444;
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: 600px;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+.leftSide button{
+  background-color: #1da3dd;
+  border-radius: 100px;
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 25px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.leftSide button:hover{
+ 
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3) !important;
+}
+
+/* <-------quiz page css ---------->*/
+.box{
+  width: 640px;
+  min-height: 350px;
+  background-color: #fff;
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 50px;
+  transition: .2s;
+}
+.quiz_header, .timer{
+  border-bottom: 1px solid black;
+  color: #464646;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+
+}
+.quiz_body{
+  margin-bottom: 20px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.scoreBox , .timerBox{
+  border-radius: 100px;
+  padding: 10px;
+
+  border: 1px solid #444;
+  color: #444;
+
+}
+.questionBox{
+  color:black;
+  font: bold;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.optionBox{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 10px 0;
+  grid-gap: 10px;
+
+}
+.optionBox span{
+  background-color:rgb(249, 247, 253) ;
+   border-radius: 10px;
+   color: black;
+   border: 1px solid rgb(240, 230, 230);
+   padding: 10px;
+   transition: 0.3s;
+}
+
+.optionBox span:hover{
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  
+}
+
+
+.footer{
+  display: flex;
+  justify-content: flex-end;
+}
+.footer button{
+  background-color: #1da3dd;
+  border-radius: 20px;
+  padding: 7px 15px;
+  color: #fff;
+  border: 1px solid #1da3dd;
+  outline: none;
+  font-size: 20px;
+  width: 200px;
+  transition: 0.4s;
+
+}
+button:hover{
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+  font:bolder;
+  background-color:white;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+}
+.resultBox{
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 15px;
+  font-size: 20px;
+  /* text-align: center; */
+}
+
+.resultBox *:nth-child(odd){
+  text-align: right;
+}
+.resultBox span{
+  font-weight: 600;
+}
+.bottomBox{
+  border-top: 1px solid #444;
+  padding-top: 1px;
+  text-align: center;
+}
+.bottomBox a {
+  background-color: #1da3dd;
+  border-radius: 50px;
+  border: 0;
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+  padding: 10px 20px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+
+@media screen and (max-width: 815px){
+  .leftSide,.rightSide{
+      width: 100%;
+      display: block;
+  }
+  .container, .box {
+    width: 425px;
+  }
+   .container{
+    
+      align-items: center;
+      flex-direction: column;
+
+   }
+  
+}
+@media screen and (max-width: 430px){
+   .container{
+     padding: 10% 10%;
+   }
+}
+.active {
+  background-color:gray !important;
+}
+
+.correct{
+  background-color: green !important;
+}
+.wrong {
+  background-color: red !important;
+}
